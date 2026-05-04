@@ -1,0 +1,8 @@
+# Ignorar pasta parquet
+data/processed/anac_parquet/
+
+# Ignorar arquivo grande CSV
+data/raw/anac_brazil.csv
+
+# Sistema
+.Trash-0/

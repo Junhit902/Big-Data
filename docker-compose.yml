@@ -1,0 +1,46 @@
+services:
+  spark-master:
+    image: apache/spark:3.5.1
+    user: root
+    container_name: spark-master
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master
+    ports:
+      - "7077:7077"
+      - "8080:8080"
+    volumes:
+      - ./data:/opt/spark-data
+    networks:
+      - spark-net
+
+  spark-worker:
+    image: apache/spark:3.5.1
+    user: root
+    command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+    depends_on:
+      - spark-master
+    volumes:
+      - ./data:/opt/spark-data
+    networks:
+      - spark-net
+
+  jupyter:
+    build: .
+    image: local-pyspark:latest
+    user: root
+    container_name: jupyter
+    depends_on:
+      - spark-master
+    ports:
+      - "8888:8888"
+      - "4040:4040"
+    volumes:
+      - ./notebooks:/opt/spark-notebooks
+      - ./data:/opt/spark-data
+    networks:
+      - spark-net
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+
+networks:
+  spark-net:
+    driver: bridge
