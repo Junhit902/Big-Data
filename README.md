@@ -34,6 +34,7 @@ Este projeto realiza análise e processamento de dados de aviação da ANAC usan
 | Apache Spark | 3.5.1 | Processamento distribuído de dados |
 | PySpark | 3.5.1 | API Python para Spark |
 | Python | 3.x | Linguagem de programação principal |
+| SQL | - | - |
 | Jupyter Lab | Latest | Ambiente de notebooks interativos |
 | Docker | - | Containerização |
 | Docker Compose | - | Orquestração de containers |
