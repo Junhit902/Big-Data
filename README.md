@@ -13,17 +13,17 @@ Um projeto robusto de análise de Big Data dos dados da ANAC (Agência Nacional 
 
 ---
 
-## 📋 Sobre o Projeto
+## Sobre o Projeto
 
 Este projeto realiza análise e processamento de dados de aviação da ANAC usando tecnologias de Big Data. O objetivo é explorar, processar e modelar dados de voos brasileiros através de ferramentas modernas como **Apache Spark** para processamento distribuído e **Jupyter Lab** prever o número de de passageiros pagos através dos dados da ANAC, utilizando modelos de machine learning de Regressão, como Decision Tree, Linear Regression e Redes Neurais.
 
-### ✨ Características Principais
+### Características Principais
 
-- ✅ **Spark Distribuído**: Master e Worker configurados para processamento paralelo
-- ✅ **Jupyter Lab**: Ambiente interativo para análise e experimentação
-- ✅ **Docker Compose**: Orquestração completa de containers
-- ✅ **PySpark**: Análise de dados em Python com poder de processamento distribuído
-- ✅ **Dados Estruturados**: Suporte para CSV e Parquet
+- **Spark Distribuído**: Master e Worker configurados para processamento paralelo
+- **Jupyter Lab**: Ambiente interativo para análise e experimentação
+- **Docker Compose**: Orquestração completa de containers
+- **PySpark**: Análise de dados em Python com poder de processamento distribuído
+- **Dados Estruturados**: Suporte para CSV e Parquet
 
 ---
 
@@ -87,10 +87,10 @@ sudo docker-compose up --build --scale spark-worker=2
 **O número de worker pode ser deifnido de acordo com as suas necessidades e poder computacional. FIz com 2.**
 
 Este comando vai:
-- ✓ Baixar a imagem base do Apache Spark 3.5.1
-- ✓ Instalar dependências do Python
-- ✓ Instalar Jupyter Lab e bibliotecas de análise
-- ✓ Configurar permissões e diretórios
+- Baixar a imagem base do Apache Spark 3.5.1
+- Instalar dependências do Python
+- Instalar Jupyter Lab e bibliotecas de análise
+- Configurar permissões e diretórios
 
 ### Passo 3: Iniciar os Containers
 
@@ -130,24 +130,24 @@ docker-compose down
 ---
 
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 Big_Data_ANAC/
-├── 📄 README.md                    # Este arquivo
-├── 📄 Dockerfile                   # Configuração da imagem Docker (Jupyter + Spark)
-├── 📄 docker-compose.yml           # Orquestração dos containers
+├── README.md                    # Este arquivo
+├── Dockerfile                   # Configuração da imagem Docker (Jupyter + Spark)
+├── docker-compose.yml           # Orquestração dos containers
 │
-├── 📁 data/                        # Diretório de dados
-│   ├── 📁 raw/                     # Dados brutos
-│   │   └── 📊 anac_brazil.csv      # Dados originais da ANAC
-│   └── 📁 processed/               # Dados processados
-│       └── 📁 anac_parquet/        # Dados convertidos para Parquet
+├── data/                        # Diretório de dados
+│   ├── raw/                     # Dados brutos
+│   │   └── anac_brazil.csv      # Dados originais da ANAC
+│   └── processed/               # Dados processados
+│       └── anac_parquet/        # Dados convertidos para Parquet
 │
-├── 📁 notebooks/                   # Jupyter Notebooks
-│   └── 📓 ANAC_Regressão.ipynb    # Análise de regressão dos dados
+├── notebooks/                   # Jupyter Notebooks
+│   └── ANAC_Regressão.ipynb    # Análise de regressão dos dados
 │
-└── 📁 scripts/                     # Scripts Python
+└── scripts/                     # Scripts Python
 ```
 
 
@@ -201,15 +201,15 @@ docker-compose restart jupyter
 
 O projeto utiliza 3 serviços:
 
-### 🔹 Spark Master
+### - Spark Master
 - Coordena o processamento distribuído
 - Portas: 7077 (comunicação), 8080 (UI)
 
-### 🔹 Spark Worker
+### - Spark Worker
 - Executa tarefas do Spark
 - Conecta-se automaticamente ao Master
 
-### 🔹 Jupyter Lab
+### - Jupyter Lab
 - Built a partir do Dockerfile customizado
 - Conecta-se ao cluster Spark
 - Portas: 8888 (UI), 4040 (Jobs monitoring)
