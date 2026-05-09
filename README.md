@@ -91,21 +91,13 @@ Este comando vai:
 - Instalar dependências do Python
 - Instalar Jupyter Lab e bibliotecas de análise
 - Configurar permissões e diretórios
-
-### Passo 3: Iniciar os Containers
-
-```bash
-docker-compose up -d
-```
-
-Este comando inicia:
 - **Spark Master** (porta 7077 e 8080)
 ![alt text](/imagens/Screenshot%20from%202026-05-02%2023-29-44.png)
 - **Spark Worker** (conectado ao Master)
 - **Jupyter Lab** (porta 8888)
 
 
-### Passo 4: Acessar o Jupyter Lab
+### Passo 3: Acessar o Jupyter Lab
 
 Abra seu navegador e acesse:
 
